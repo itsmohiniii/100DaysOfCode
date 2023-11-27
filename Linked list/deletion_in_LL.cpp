@@ -31,7 +31,7 @@ void printLL(Node* head){
     }
 }
 
-Node* deleteHead(Node* head){
+Node* deleteHead(Node* head){  //O(1)
     if(head == NULL) return head;
     Node* temp = head;
     head = head-> next;
@@ -39,7 +39,7 @@ Node* deleteHead(Node* head){
     return head;
 }
 
-Node* deleteTail(Node* head){
+Node* deleteTail(Node* head){  //O(N)
     if(head == NULL) return NULL; 
     if(head->next== NULL){
         delete head;
@@ -54,7 +54,7 @@ Node* deleteTail(Node* head){
     return head;
 }
 
-Node* deleteKth(Node* head, int k){
+Node* deleteKth(Node* head, int k){    //worst case O(N), Best case O(1), avg case O(N/2)
     if(head == NULL) return NULL; 
     if(k==1){
         Node* temp = head;
@@ -79,7 +79,7 @@ Node* deleteKth(Node* head, int k){
     return head;
 }
 
-Node* deleteEl(Node* head, int el){
+Node* deleteEl(Node* head, int el){    //worst case O(N), Best case O(1), avg case O(N/2)
     if(head == NULL) return NULL; 
     if(head->data==el){
         Node* temp = head;
@@ -115,11 +115,11 @@ int main() {
     // printLL(head);
     
     // head = deleteKth(head, 5);
-    // cout<<endl<<"after deleting tail:";
+    // cout<<endl<<"after deleting kth element:";
     // printLL(head);
     
     // head = deleteEl(head,8);
-    // cout<<endl<<"after deleting tail:";
+    // cout<<endl<<"after deleting element with value:";
     // printLL(head);
     
 }
