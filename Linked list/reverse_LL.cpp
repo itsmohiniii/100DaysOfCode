@@ -36,6 +36,9 @@ void printLL(Node* head){ //O(N)
     }
 }
 
+// reverse LL (brute force approach): store data of LL in stack and then start traversing the LL and change data of LL with the top of stack
+// TC: O(2N), SC: O(N)
+
 Node* reverseLLIterative(Node* head){ //TC=O(N) SC=O(1)
     Node* temp = head;
     Node* prev = NULL;
