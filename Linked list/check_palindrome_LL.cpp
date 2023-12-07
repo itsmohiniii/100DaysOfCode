@@ -65,7 +65,7 @@ Node* reverseLLRecursive(Node* head){
 bool checkPalindromeLL(Node* head){     //TC: O(2N) SC: O(1)
     Node* slow = head;  //step1: find middle Node (hare-tortoise algorithm) TC: O(N/2)
     Node* fast = head;     
-    while(fast->next!=NULL && fast->next->next!=NULL){ //odd LL(stop at middleNode), even LL(stop at node just before the middleNode or M1)
+    while(fast->next!=NULL && fast->next->next!=NULL){ //odd LL(stop at middleNode), even LL(stop at M1 or node just before the middleNode)
         slow=slow->next;
         fast=fast->next->next;
     }
