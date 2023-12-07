@@ -58,7 +58,7 @@ int calcLengthLoopLL(Node* slow, Node* fast){
     return cnt;
 }
 
-int lengthLoopLL (Node* head){  //TC: ??  SC:O(1)
+int lengthLoopLL (Node* head){  //SC:O(1), TC: O(N) as we can break instead of calling calcLengthLoopLL() and write it outside the loop
     Node* slow= head; 
     Node* fast = head;
     while(fast!=NULL && fast->next!=NULL){
