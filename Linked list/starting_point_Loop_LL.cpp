@@ -45,7 +45,7 @@ Node* startingPointLoopLL_Brute(Node* head){    //TC: O(N*2*1) or O(N*2*logN)  S
     return NULL;
 }
 
-Node* startingPointLoopLL(Node* head){  //TC: O(N)  SC:O(1)
+Node* startingPointLoopLL(Node* head){  //TC: O(N)??  SC:O(1)
     Node* slow= head;
     Node* fast = head;
     while(fast!=NULL && fast->next!=NULL){
