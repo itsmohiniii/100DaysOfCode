@@ -11,15 +11,15 @@ int fibonacci_iterative(int N){ //  TC:O(N) SC:O(N)
     return f[N];
 }
 
-int fibonacci_revcursive(int N){ //TC:O(2^N) exponential SC:O(N) = height of tree
+int fibonacci_recursive(int N){ //TC:O(2^N) exponential SC:O(N) = height of tree
     if(N<=1)
         return N;
-    return fibonacci_revcursive(N-1) + fibonacci_revcursive(N-2);
+    return fibonacci_recursive(N-1) + fibonacci_recursive(N-2);
 }
 
 int main() {
     cout<<fibonacci_iterative(6)<<endl;
-    cout<<fibonacci_revcursive(6)<<endl;
+    cout<<fibonacci_recursive(6)<<endl;
     
     return 0;
 }
