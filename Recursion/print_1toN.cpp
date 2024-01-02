@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void print_1_to_N (int i, int N){
+void print_1_to_N (int i, int N){    //TC:O(N) SC:O(N)
     if(i>N) return;
     cout<<i<<" ";
     print_1_to_N(i+1, N);
 }
 
-void print_1_to_N_backtracking (int N){
+void print_1_to_N_backtracking (int N){    //TC:O(N) SC:O(N)
     if(N==0) return;
     print_1_to_N_backtracking(N-1);
     cout<<N<<" ";
