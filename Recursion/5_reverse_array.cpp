@@ -17,7 +17,7 @@ void reverse_arr_1_pointer(int arr[], int N, int i){  //TC:O(N/2) SC:O(N/2)
 }
 
 //reverse array and return the reversed array
-int* reverse_arr_return(int* arr, int i, int j){
+int* reverse_arr_return(int* arr, int i, int j){   //TC:O(N/2) SC:O(N/2) 
     if(i>=j) return arr;
     swap(arr[i], arr[j]);
     return reverse_arr_return(arr, i+1, j-1);
