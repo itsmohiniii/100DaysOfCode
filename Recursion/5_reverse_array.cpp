@@ -58,13 +58,13 @@ int main() {
     cout<<endl<<endl;
 
     
-    int arr[]= {1, 2, 3, 4, 5};
-    int N=sizeof(arr)/sizeof(arr[0]);
+    int arr2[]= {1, 2, 3, 4, 5};
+    int N=sizeof(arr2)/sizeof(arr2[0]);
     for(int i=0; i<N;i++){
-        cout<<arr[i]<<" ";
+        cout<<arr2[i]<<" ";
     }
     cout<<endl;
-    int * ans = reverse_arr_return(arr, 0, N-1);
+    int * ans = reverse_arr_return(arr2, 0, N-1);
     for(int i=0; i<N;i++){
         cout<<ans[i]<<" ";
     }
