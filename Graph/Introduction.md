@@ -18,11 +18,11 @@ DAG (Directed Acyclic Graph)
 2. A node cant appear twice in a path.
 3. Adjacent node must have an edge bw them.
 
-**For Undirected Graph**
+**For Undirected Graph** -
 **Degree (node)** : no. of edges that are attached to that node 
 Property : Total degree of a graph = 2 * no. of edges (Why? because every edge is connected to 2 nodes.)
 
-**For Directed Graph**
+**For Directed Graph** -
 **InDegree (node)** : no. of incoming edges to that node 
 **OutDegree (node)** : no. of outgoing edges from that node 
 
