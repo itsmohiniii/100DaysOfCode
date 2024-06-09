@@ -18,6 +18,7 @@ DAG (Directed Acyclic Graph)
 2. A node cant appear twice in a path.
 3. Adjacent node must have an edge bw them.
 
+**Weighted Graph** - 
 **Edge weights** (unit weights i.e. 1, by default)
 
 **For Undirected Graph** -
