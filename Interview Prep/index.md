@@ -1,4 +1,4 @@
-IMPORTANT FACTORS FOR INTERVIEW:
+**IMPORTANT FACTORS FOR INTERVIEW:**
 1. solve the ques
 2. effective communication
 3. speed (solve follow-ups) (coding time should be in 5 mins - all other thinking time)
