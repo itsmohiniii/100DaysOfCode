@@ -13,4 +13,7 @@
 
 **GOOGLE**
 1. speed (google - 45mins to solve 1-2 ques)
-2. leetcode medium and hard ques 
+2. leetcode medium and hard ques
+
+Watch this video also:
+https://www.youtube.com/watch?v=xPM6jUVidnM&ab_channel=ShaktiTripathi
