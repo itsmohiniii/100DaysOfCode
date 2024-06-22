@@ -26,6 +26,20 @@ int main {
  }
 }
 
+//ADJACENCY MATRIX WAY (undirected weighted graph):
+//TC: O(M) SC:O(N*N) 
+int main {
+ int n, m;
+ cin>>n>>m;
+ int adj[n+1][n+1];
+ for (int i=0; i<m; i++) {
+  int u,v, wt;
+  cin>>u>>v>>wt;
+  adj[u][v]=wt;
+  adj[v][u]=wt;
+ }
+}
+
 //store undirected graph using Adjacency list 
 //TC: O(M) SC:O(2E) where E=#edges (as 1 edge connected to 2 nodes)
 int main {
