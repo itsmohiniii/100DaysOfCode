@@ -43,3 +43,19 @@ int main() {
     }
     return 0;
 }
+
+Sample Input : 
+9 9
+1 2
+1 6
+2 3
+2 4
+6 7
+6 9
+4 5
+7 8
+5 8
+
+Sample Output: 
+1 2 6 3 4 7 9 5 8 
+
