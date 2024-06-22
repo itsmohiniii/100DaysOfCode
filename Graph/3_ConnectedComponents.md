@@ -1,4 +1,4 @@
-A graph can have multiple components (not connected to each other via edge)
+A graph can have multiple components (not connected to each other via edge)  
 and that is still a graph.
 
 Hence, 
