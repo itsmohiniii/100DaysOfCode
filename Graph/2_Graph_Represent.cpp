@@ -69,6 +69,19 @@ int main {
  return 0;
 }
 
+//store directed weighted graph using Adjacency list 
+//TC: O(M) SC:O(E) 
+int main {
+ int n, m;
+ cin>>n>>m;
+ vector<pair<int,int>> adj[n+1] 
+ for(int i=0;i<m;i++){
+  int u,v,wt; //u—>v
+  cin>>u>>v>>wt;
+  adj[u].push_back(make_pair(v,wt));
+ }
+ return 0;
+}
 
 
 
