@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
  public: 
-  vector<int> traverse_graph_bfs(int N, vector<int> adj[ ]) {
+  vector<int> traverse_graph_bfs(int N, vector<int> adj[]) {
   int vis[N+1] = {0}; //1-based indexing
   vis[1]=1;
   queue<int> q;
@@ -11,10 +11,10 @@ class Solution {
   vector<int> bfs;
   while(!q.empty()) {
     int node = q.front();
-    bfs.push_back(node);
     q.pop();
+    bfs.push_back(node);
     for(auto it: adj[node]) {
-     if(vis[it]==0) {
+     if(!vis[it]) { //vis[it]==0
       q.push(it);
       vis[it]=1;
      }
