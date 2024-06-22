@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//depth = Recursion
 class Solution {
  private:
   // dfs() function is called once for every node TC:O(N)
