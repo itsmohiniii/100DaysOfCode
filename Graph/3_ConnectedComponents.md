@@ -1,8 +1,8 @@
 A graph can have multiple components (not connected to each other via edge)  
 and that is still a graph.
 
-Hence, 
-we need to keep a **vis array** 
+Hence,  
+we need to keep a **vis array** for the nodes
 
 for(i=1;i<=10;i++){  
   if(!vis[i]){  
