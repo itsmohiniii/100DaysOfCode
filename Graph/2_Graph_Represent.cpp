@@ -13,7 +13,7 @@ Store:
 0-based => adj[n][n] 
 
 ADJACENCY MATRIX WAY (undirected graph):
-//TC: O(M) SC:O(N*N)
+//TC: O(M) SC:O(N*N) there is lot of unused space in matrix
 int main {
  int n, m;
  cin>>n>>m;
