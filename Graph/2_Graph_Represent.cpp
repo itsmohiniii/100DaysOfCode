@@ -12,7 +12,7 @@ Store:
 1-based -> adj[n+1][n+1]
 0-based => adj[n][n] 
 
-ADJACENCY MATRIX WAY (undirected graph):
+//ADJACENCY MATRIX WAY (undirected graph):
 //TC: O(M) SC:O(N*N) there is lot of unused space in matrix
 int main {
  int n, m;
@@ -25,6 +25,36 @@ int main {
   adj[v][u]=1;
  }
 }
+
+//store undirected graph using Adjacency list 
+//TC: O(M) SC:O(2E) where E=#edges (as 1 edge connected to 2 nodes)
+int main {
+ int n, m;
+ cin>>n>>m;
+ vector<int> adj[n+1] //1-based indexing (if 0-based, adj[n])
+ for(int i=0;i<m;i++){
+  int u,v;
+  cin>>u>>v;
+  adj[u].push_back(v);
+  adj[v].push_back(u);
+ }
+ return 0;
+}
+
+//store directed graph using Adjacency list 
+//TC: O(M) SC:O(E) 
+int main {
+ int n, m;
+ cin>>n>>m;
+ vector<int> adj[n+1] 
+ for(int i=0;i<m;i++){
+  int u,v; //u—>v
+  cin>>u>>v;
+  adj[u].push_back(v);
+ }
+ return 0;
+}
+
 
 
 
