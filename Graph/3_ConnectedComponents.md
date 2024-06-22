@@ -6,7 +6,7 @@ we need to keep a **vis array**
 
 for(i=1;i<=10;i++){
   if(!vis[i]){
-    traversal(i);
+    traversal(i)
   }
 }
 
