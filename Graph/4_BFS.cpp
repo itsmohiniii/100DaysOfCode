@@ -3,16 +3,22 @@ using namespace std;
 
 class Solution {
  public: 
+  //TC: O(N) + O(2E) 
+  //SC: O(3N)~O(N) queue,vis array,bfs vector
   vector<int> traverse_graph_bfs(int N, vector<int> adj[]) {
   int vis[N+1] = {0}; //1-based indexing
   vis[1]=1;
   queue<int> q;
   q.push(1);
   vector<int> bfs;
+   
+  //TC: O(N)
   while(!q.empty()) {
     int node = q.front();
     q.pop();
     bfs.push_back(node);
+   
+    //TC: runs for all degrees (neighbours) for a node = For all nodes, runs for total degree of the graph = O(2E)
     for(auto it: adj[node]) {
      if(!vis[it]) { //vis[it]==0
       q.push(it);
