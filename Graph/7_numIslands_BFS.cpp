@@ -17,7 +17,7 @@ class Solution {
      for(int delCol=-1; delCol<=1; delCol++) {  
       int neighRow = row + delRow;  
       int neighCol = col + delCol; 
-      if(neighRow>=0 && neighRow<n && neighCol>=0 && neighCol<m && grid[neighRow][neighCol] != '0' && vis[neighRow][neighCol]==0) {
+      if(neighRow>=0 && neighRow<n && neighCol>=0 && neighCol<m && grid[neighRow][neighCol] == '1' && vis[neighRow][neighCol]==0) {
        q.push({neighRow, neighCol});
        vis[neighRow][neighCol]=1;
       }
@@ -33,7 +33,7 @@ class Solution {
    int cnt = 0;
    for(int row=0; row<n; row++) {
     for(int col=0; col<m; col++) {
-     if(grid[row][col]!='0' && !vis[row][col]) {
+     if(grid[row][col]=='1' && !vis[row][col]) {
       cnt++;
       bfs(n,m, row, col, vis, grid);
      }   
