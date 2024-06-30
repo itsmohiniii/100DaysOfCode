@@ -5,7 +5,7 @@ class Solution {
  private: 
   void dfs(int n, int m, int row, int col, vector<vector<int>>& vis, vector<vector<char>>& grid) {
    vis[row][col] = 1;
-   //traverse in the neighbours and mark them if its a land and not visited
+   //traverse in the neighbours and mark them visited if its a land and not visited
    for(int delRow=-1; delRow<=1; delRow++) { 
      for(int delCol=-1; delCol<=1; delCol++) {  
       int neighRow = row + delRow;  
