@@ -12,7 +12,7 @@ class Solution {
   }
 
   //SC: O(N) + O(N) for recursion stack space, vis array
-  //TC: O(N) + O(N+2E) ~ O(N) if E=0  => O(N) for outer For loop, O(N+2E) for entire dfs of graph
+  //TC: O(N) + O(N+2E) ~ O(N) if E=0  => O(N) for outer For loop, O(N+2E) for overall dfs of graph
   public: int numProvinces(int N, vector < vector < int >> adjMtx) {
     //convert adjacency Matrix to Adjacency List
     vector < int > adjLs[N];
