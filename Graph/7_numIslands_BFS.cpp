@@ -25,7 +25,11 @@ class Solution {
     }
    }   
   }
+
  public:
+  //SC: O(N^2) + O(N^2) ~ O(N^2) => for vis 2D matrix, for queue WC: O(N^2) if all nodes are connected and are lands, queue will end up storing  all of them
+  //TC: O(N*M) + O(N*M*9) ~ O(N*M) 
+  //TC: WC=> If all are marked as 1 in grid, then bfs will be called once. In that one bfs call, it will visit everyone, which takes N*M*9
   int numIslands(vector<vector<char>>& grid) {
    int n= grid.size(); //#rows
    int m = grid[0].size(); //#cols
