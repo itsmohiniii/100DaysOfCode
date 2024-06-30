@@ -11,6 +11,8 @@ class Solution {
     int row = q.front().first; 
     int col = q.front().second; 
     q.pop();
+
+    //traverse in the neighbours and mark them if its a land and not visited
     for(int delRow=-1; delRow<=1; delRow++) { 
      for(int delCol=-1; delCol<=1; delCol++) {  
       int neighRow = row + delRow;  
