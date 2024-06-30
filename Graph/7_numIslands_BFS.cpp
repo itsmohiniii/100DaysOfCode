@@ -13,7 +13,7 @@ class Solution {
     q.pop();
 
     //traverse in the neighbours and mark them visited if its a land and not visited
-    //O(9) - 9 neighbours
+    //TC: O(9) - 9 neighbours
     for(int delRow=-1; delRow<=1; delRow++) { 
      for(int delCol=-1; delCol<=1; delCol++) {  
       int neighRow = row + delRow;  
@@ -36,6 +36,8 @@ class Solution {
    int m = grid[0].size(); //#cols
    vector<vector<int>> vis(n, vector<int>(m,0));
    int cnt = 0;
+   
+   //TC: O(N*M) for outer loop
    for(int row=0; row<n; row++) {
     for(int col=0; col<m; col++) {
      if(grid[row][col]=='1' && !vis[row][col]) {
