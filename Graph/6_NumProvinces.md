@@ -6,7 +6,8 @@
 
 
 If there are no neighbouring nodes,  
-TC: O(N) + O(N) as E=0
+TC: O(N) + O(N)  
+as O(N)  for outer For loop, O(N) for dfs calls for every node, and E=0.
 
 ![image](https://github.com/itsmohiniii/15DaysOfCode/assets/74259856/877d46e5-f799-48d3-b385-190883cdd719)
 
