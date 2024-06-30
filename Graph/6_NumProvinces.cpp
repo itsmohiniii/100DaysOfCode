@@ -37,8 +37,8 @@ class Solution {
 int main() {
   int N = 3;
   vector<vector<int>> adjMtx = { {1,0,1},
-					                       {0,1,0},
-					                       {1,0,1} };
+				 {0,1,0},
+				 {1,0,1} };
   Solution obj;
   cout << obj.numProvinces(N, adjMtx);
   return 0;
