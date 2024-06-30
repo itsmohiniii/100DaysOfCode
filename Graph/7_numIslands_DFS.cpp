@@ -5,11 +5,12 @@ class Solution {
  private: 
   void dfs(int n, int m, int row, int col, vector<vector<int>>& vis, vector<vector<char>>& grid) {
    vis[row][col] = 1;
+   //traverse in the neighbours and mark them if its a land and not visited
    for(int delRow=-1; delRow<=1; delRow++) { 
      for(int delCol=-1; delCol<=1; delCol++) {  
       int neighRow = row + delRow;  
       int neighCol = col + delCol; 
-      if(neighRow>=0 && neighRow<n && neighCol>=0 && neighCol<m && grid[neighRow][neighCol] != '0' && vis[neighRow][neighCol]==0) {
+      if(neighRow>=0 && neighRow<n && neighCol>=0 && neighCol<m && grid[neighRow][neighCol] == '1' && vis[neighRow][neighCol]==0) {
        dfs(n,m, neighRow, neighCol, vis, grid);      
       }
      }
@@ -23,7 +24,7 @@ class Solution {
    int cnt = 0;
    for(int row=0; row<n; row++) {
     for(int col=0; col<m; col++) {
-     if(grid[row][col]!='0' && !vis[row][col]) {
+     if(grid[row][col]=='1' && !vis[row][col]) {
       cnt++;
       dfs(n,m, row, col, vis, grid);
      }   
