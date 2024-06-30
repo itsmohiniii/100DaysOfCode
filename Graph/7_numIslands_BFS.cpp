@@ -13,7 +13,7 @@ class Solution {
     q.pop();
 
     //traverse in the neighbours and mark them visited if its a land and not visited
-    //TC: O(9) - 9 neighbours
+    //TC: O(9) - 8 neighbours + 1 self
     for(int delRow=-1; delRow<=1; delRow++) { 
      for(int delCol=-1; delCol<=1; delCol++) {  
       int neighRow = row + delRow;  
