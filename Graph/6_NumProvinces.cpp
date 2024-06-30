@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 
 class Solution {
@@ -11,6 +10,7 @@ class Solution {
       }
     }
   }
+
   public: int numProvinces(int N, vector < vector < int >> adjMtx) {
     //convert adjacency Matrix to Adjacency List
     vector < int > adjLs[N];
@@ -22,9 +22,7 @@ class Solution {
       }
     }
 
-    int vis[N] = {
-      0
-    }; //0-based indexing
+    int vis[N] = {0}; //0-based indexing
     int cnt = 0;
     for (int i = 0; i < N; i++) {
       if (vis[i] == 0) {
@@ -38,23 +36,9 @@ class Solution {
 
 int main() {
   int N = 3;
-  vector < vector < int >> adjMtx = {
-    {
-      1,
-      0,
-      1
-    },
-    {
-      0,
-      1,
-      0
-    },
-    {
-      1,
-      0,
-      1
-    }
-  };
+  vector<vector<int>> adjMtx = { {1,0,1},
+					                       {0,1,0},
+					                       {1,0,1} };
   Solution obj;
   cout << obj.numProvinces(N, adjMtx);
   return 0;
