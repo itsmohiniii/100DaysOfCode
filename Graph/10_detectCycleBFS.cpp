@@ -26,8 +26,12 @@ class Solution {
     }
     
   public: 
+    //SC: O(N)+O(N) ~ O(N) for vis array and queue.
+    //TC: O(N) + O(N+2E) 
     bool hasCycle(vector<int> adj[], int N) {
       int vis[N] = {0}; //0-based indexing
+      
+      //TC:O(N) for outer For loop
       for(int i=0;i<N;i++) { //Considering graph can have multiple connected components
           if(!vis[i]){
               if(detectUsingBFS(adj,i,vis)) return true;
