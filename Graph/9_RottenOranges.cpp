@@ -35,7 +35,7 @@ class Solution {
       int n= grid.size();
       int m = grid[0].size();
       vector<vector<int>> vis = grid;
-      queue <pair<pair<int,int>,int>> q;  //{{r,c},t}
+      queue <pair< pair<int,int>, int>> q;  //{{r, c}, t}
       int cntFresh = 0;
       for(int i=0; i<n;i++) {
         for(int j=0;j<m;j++) {
