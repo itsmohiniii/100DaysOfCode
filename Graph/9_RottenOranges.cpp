@@ -9,7 +9,7 @@ class Solution {
       int tm=0;
       int cntFreshtoRotten = 0;
       int delrow [ ] = {-1,0,1,0};
-      int delcol [ ] = {0,1,0,-1};
+      int delcol [ ] = {0,1,0,-1}; 
       while(!q.empty()) {
         int row = q.front().first.first;
         int col = q.front().first.second;
@@ -31,6 +31,7 @@ class Solution {
     }
 
   public:
+    //SC: O(N*M)+O(N*M) ~ O(N*M) for vis array, for queue if all the oranges are rotten then N*M stored in queue
     int rottingOranges(vector<vector<int>>& grid) {
       int n= grid.size();
       int m = grid[0].size();
