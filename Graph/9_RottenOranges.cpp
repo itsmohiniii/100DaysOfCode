@@ -46,7 +46,8 @@ class Solution {
            cntFresh ++;
          }
         }
-      }       return bfs(q,vis,n,m, cntFresh);
+      }       
+      return bfs(q,vis,n,m, cntFresh);
     }
 };
 
