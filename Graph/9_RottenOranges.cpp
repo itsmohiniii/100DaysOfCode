@@ -10,6 +10,9 @@ class Solution {
       int cntFreshtoRotten = 0;
       int delrow [ ] = {-1,0,1,0};
       int delcol [ ] = {0,1,0,-1}; 
+
+      //TC: O(N*M) + O(N*M*4)
+      // if all oranges are fresh, they will be stored in N*M times and then for every orange, 4 neighbour oranges are there so, N*M*4 times for all neighbours
       while(!q.empty()) {
         int row = q.front().first.first;
         int col = q.front().first.second;
@@ -31,13 +34,16 @@ class Solution {
     }
 
   public:
-    //SC: O(N*M)+O(N*M) ~ O(N*M) for vis array, for queue if all the oranges are rotten then N*M stored in queue
+    //SC: O(N*M)+O(N*M) ~ O(N*M) for vis array, for queue if all the oranges are fresh then N*M stored in queue
+    //TC: O(N*M)+O(N*M)+O(N*M*4) ~ O(N*M) 
     int rottingOranges(vector<vector<int>>& grid) {
       int n= grid.size();
       int m = grid[0].size();
       vector<vector<int>> vis = grid; //do not alter the data given to you, instead make a copy
       queue <pair< pair<int,int>, int>> q;  //{{r, c}, t}
       int cntFresh = 0;
+
+      //TC:0(N*M)
       for(int i=0; i<n;i++) {
         for(int j=0;j<m;j++) {
           if(vis[i][j]==2) {
