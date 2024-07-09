@@ -9,7 +9,9 @@ class Solution {
     bool isvalidNeighbour (int nrow, int ncol, int n, int m) {
       return nrow>=0 && nrow<n && ncol>=0 && ncol<m;
     }
-    
+
+  //SC: O(N*M)+O(N*M)+O(N*M) ~ O(N*M) for queue, vis 2dvector, dist 2dvector
+  //TC: O(N*M)+O(N*M*4) ~ O(N*M)
   public: 
     vector<vector<int>> distanceNearest1 (vector<vector<int>> grid) {
       int n = grid.size();
@@ -19,6 +21,7 @@ class Solution {
       queue<pair<pair<int,int>,int>> q;
       
       //push initial 1s in the queue and mark them  as visited
+      //TC:O(N*M)
       for(int i=0;i<n;i++) {
         for(int j=0; j<m;j++) {
           if(grid[i][j]==1) {
@@ -32,6 +35,7 @@ class Solution {
       int delcol[] = {0,1,0,-1};
       
       //traverse till the queue is non-empty
+      //TC:O(N*M*4)
       while(!q.empty()) {
         int row = q.front().first.first;
         int col = q.front().first.second;
