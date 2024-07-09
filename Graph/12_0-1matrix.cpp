@@ -18,7 +18,7 @@ class Solution {
       vector<vector<int>> dist(n, vector<int>(m,0));
       queue<pair<pair<int,int>,int>> q;
       
-      //store initial 1s in the queue and mark them  as visited
+      //push initial 1s in the queue and mark them  as visited
       for(int i=0;i<n;i++) {
         for(int j=0; j<m;j++) {
           if(grid[i][j]==1) {
@@ -41,7 +41,7 @@ class Solution {
         q.pop();
         dist[row][col] = steps;
         
-        // if not visited, push the neighbours into the queue and mark them as visited
+        // if not visited, push the neighbours in the queue and mark them as visited
         for(int i=0;i<4;i++) {
           int nrow = row + delrow[i];
           int ncol = col + delcol[i];
