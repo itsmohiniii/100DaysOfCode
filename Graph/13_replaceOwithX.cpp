@@ -62,4 +62,11 @@ int main() {
     }
     cout<<endl;
   }
+  //Output:
+  // X O X X X X 
+  // X O X X X X 
+  // X X X X X X 
+  // O X X X X X 
+  // X X X O X O 
+  // O O X O O O 
 }
