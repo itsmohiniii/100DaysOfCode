@@ -28,6 +28,7 @@ class Solution {
       int delcol[ ] = {0,1,0,-1};
       
       //traverse first and last rows
+      //TC: O(M)
       for(int col=0;col<m;col++) {
         //firstrow
         if(mat[0][col]=='O' && !vis[0][col]){
@@ -40,6 +41,7 @@ class Solution {
       }
       
       //traverse first and last columns
+      //TC: O(N)
       for(int row=0;row<n;row++) {
         // first column
         if(mat[row][0]=='O' && !vis[row][0]){
