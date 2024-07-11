@@ -18,7 +18,7 @@ class Solution {
       //TC:O(N*M)
       for(int row=0;row<n;row++) {
         for(int col=0;col<m;col++) {
-          if((row==0 || row==n-1 || col==0 || col==m-1) && mat[row][col]=='O' && !vis[row][col]) {
+          if((row==0 || row==n-1 || col==0 || col==m-1) && grid[row][col]==1 && !vis[row][col]) {
              q.push({row,col});
              vis[row][col]=1;
           }
