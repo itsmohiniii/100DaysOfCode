@@ -2,7 +2,8 @@
 // Replace Os or set of Os (that are surrounded by X on all 4 sides) with Xs 
 
 //Intution: set of Os connected to a boundary 'O' cant be surrounded by 'X', hence, cant be converted to 'X'
-//Approach: From boundary, find Os and traverse (using dfs/bfs) and mark all Os connected to a boundary 'O' as visited, and convert the remainig Os to 'X'.
+//Approach: start from boundary Os and traverse (using dfs/bfs) and mark all Os connected to a boundary 'O' as visited (not to be converted),
+//          and convert the remainig Os to 'X'.
 
 #include<bits/stdc++.h>
 using namespace std;
