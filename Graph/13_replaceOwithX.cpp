@@ -26,6 +26,8 @@ class Solution {
       vector<vector<int>> vis(n, vector<int>(m,0));
       int delrow[ ] = {-1,0,1,0};
       int delcol[ ] = {0,1,0,-1};
+
+      //traverse 1st row, 1st column, last row, last column
       for(int row=0;row<n;row++) {
         for(int col=0;col<m;col++) {
           if((row==0 || row==n-1 || col==0 || col==m-1) && mat[row][col]=='O' && !vis[row][col]) {
@@ -33,6 +35,28 @@ class Solution {
           }
         }
       } 
+      //traverse first and last rows
+      // for(int col=0;col<m;col++) {
+      //   //firstrow
+      //   if(mat[0][col]=='O' && !vis[0][col]){
+      //     dfs(0,col,vis,mat,n,m, delrow, delcol);
+      //   }
+      //   //lastrow
+      //   if(mat[n-1][col]=='O' && !vis[n-1][col]){
+      //     dfs(n-1,col,vis,mat,n,m, delrow, delcol);
+      //   }
+      // }
+      
+      //traverse first and last columns
+      // for(int row=0;row<n;row++) {
+      //   if(mat[row][0]=='O' && !vis[row][0]){
+      //     dfs(row,0,vis,mat,n,m, delrow, delcol);
+      //   }
+      //   if(mat[col][m-1]=='O' && !vis[col][m-1]){
+      //     dfs(col,m-1,vis,mat,n,m, delrow, delcol);
+      //   }
+      // } 
+      
       for(int i=0;i<n;i++) {
         for(int j=0;j<m;j++) {
           if(mat[i][j]=='O' && !vis[i][j]) {
