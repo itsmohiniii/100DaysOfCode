@@ -18,19 +18,23 @@ class Solution {
     }
 
   public: 
+    //TC:O(N*M*log(N*M))+O(N*M*4)
+    //SC:O(N*M)+O(N*M) 
     int numDistinctIslands(vector<vector<int>>& grid) {
       int n = grid.size();
       int m = grid[0].size();
-      vector<vector<int>> vis(n, vector<int>(m,0));
-      set<vector<pair<int,int>>> st;
+      vector<vector<int>> vis(n, vector<int>(m,0)); //SC:O(N*M) 
+      set<vector<pair<int,int>>> st; //SC:O(N*M) WC:set is storing all the coordinates
       int delrow[ ] = {-1,0,1,0};
       int delcol[ ] = {0,1,0,-1};
+
+      //TC:O(N*M)
       for(int i=0;i<n;i++) {
         for(int j=0;j<m;j++) {
           if(grid[i][j]==1 && !vis[i][j]) {
             vector<pair<int,int>> vec;
-            dfs(i,j,vis,grid,n, m,i,j, delrow, delcol, vec);
-            st.insert(vec);
+            dfs(i,j,vis,grid,n, m,i,j, delrow, delcol, vec); //TC: O(N*M*4) for all dfs calls
+            st.insert(vec); //TC: O(log(N*M)) where N*M is the length of set, WC: set will store all the coordinates
           }
         }
       }
