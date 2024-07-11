@@ -22,6 +22,8 @@ class Solution {
     }
 
   public: 
+    //TC: O(N)+O(M)+  O(N*M)*4 ~ O(N*M) ... WC: if all cells are 'O', dfs will run for (N*M) cells and *4, for 4 directions neighbours 
+    //SC: O(N*M)+O(N*M)+O(4)+O(4) ~ O(N*M) ...for vis, for auxiliary stack space WC: if all cells are 'O', at one instance, stack space can be (N*M) maximum, for delrow, for delcol
     vector<vector<char>> replaceOwithX(int n, int m, vector<vector<char>> mat) {
       vector<vector<int>> vis(n, vector<int>(m,0));
       int delrow[ ] = {-1,0,1,0};
