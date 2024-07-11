@@ -7,11 +7,15 @@ using namespace std;
 
 class Solution { 
   public: 
+    //SC: O(N*M)+O(N*M) ~ O(N*M) for vis, queue
+    //TC: 0(N*M*4)+O(N*M)+O(N*M) ~ O(N*M) 
     int numEnclaves (vector<vector<int>>& grid) {
       int n = grid.size();
       int m = grid[0].size();
       vector<vector<int>> vis(n, vector<int>(m,0));
       queue<pair<int,int>> q;
+
+      //TC:O(N*M)
       for(int j=0;j<m;j++) {
         if(grid[0][j]==1 && !vis[0][j]) {
           q.push({0,j});
@@ -35,6 +39,7 @@ class Solution {
       
       int delrow [ ] = {-1,0,1,0};
       int delcol [ ] = {0,1,0,-1};
+      //TC:O(N*M*4) WC:if all cells are land, while loop will run for (N*M) times, and there are 4 neighbours for each cell, hence, N*M*4
       while(!q.empty()) {
         int row = q.front().first;
         int col = q.front().second;
@@ -48,15 +53,17 @@ class Solution {
           }
         }
       }
-      int count =0;
+      
+      int cnt =0;
+      //TC:O(N*M)
       for(int i=0;i<n;i++) {
         for(int j=0;j<m;j++) {
           if(grid[i][j]==1 && !vis[i][j]) {
-            count++;
+            cnt++;
           }
         }
       }
-      return count;
+      return cnt;
     }
 };
 
