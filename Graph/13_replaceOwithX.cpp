@@ -52,7 +52,7 @@ class Solution {
       //   if(mat[row][0]=='O' && !vis[row][0]){
       //     dfs(row,0,vis,mat,n,m, delrow, delcol);
       //   }
-      //   if(mat[col][m-1]=='O' && !vis[col][m-1]){
+      //   if(mat[row][m-1]=='O' && !vis[row][m-1]){
       //     dfs(col,m-1,vis,mat,n,m, delrow, delcol);
       //   }
       // } 
