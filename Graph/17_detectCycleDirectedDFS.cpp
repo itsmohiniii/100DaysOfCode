@@ -22,7 +22,7 @@ class Solution {
         }
       }
       
-      pathvis[node]=0;
+      pathvis[node]=0; //in backtracking, reset the pathvis of that node
       return false;
     }
 
