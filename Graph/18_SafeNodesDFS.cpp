@@ -1,6 +1,7 @@
 // Eventual safe states (using Cycle detection technique DFS) 
 // Directed Graph
 //Intuition: Any node that is part of a cycle or is connected/incoming (has an incoming edge) to the cycle - can never be a safe node.
+          // All others are safe nodes.
 
 #include<bits/stdc++.h>
 using namespace std;
