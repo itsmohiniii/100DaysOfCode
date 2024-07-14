@@ -9,9 +9,8 @@ class Solution {
     //TC: O(N+E) for overall bfs of graph
     //SC: O(N)+O(N) for indegree array, for queue 
     vector<int> topoSort (int N, vector<int> adj[]) {
-      int indegree[N] = {0};
-
       //find the indegree of all nodes
+      int indegree[N] = {0};
       for(int i=0;i<N;i++) {
         for(auto it: adj[i]) {
           indegree[it]++;
@@ -25,9 +24,8 @@ class Solution {
         if(indegree[i]==0) q.push(i);
       }
 
-      vector<int> topo;
-
       //take the node out of the queue, store in topo vector,  and reduce the indegree of adjacent nodes
+      vector<int> topo;
       while(!q.empty()) {
         int node = q.front();
         q.pop();
