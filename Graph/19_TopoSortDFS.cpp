@@ -1,4 +1,7 @@
 // Topological Sorting (DFS)
+// Intuition: when we complete the dfs for a node, we put it in the stack 
+// and every dfs call (for all neighbours of that node) would be stacked below
+// so when we start popping out of the stack, we get the linear ordering
 
 #include<bits/stdc++.h>
 using namespace std;
