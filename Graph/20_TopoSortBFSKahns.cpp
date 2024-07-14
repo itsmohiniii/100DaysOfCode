@@ -1,4 +1,5 @@
 //Topo sort (Kahn's Algorithm | BFS) 
+//Intuition: A node with indegree=0 has no incoming edges, so it can be placed at the starting of topoSort
 
 
 #include<bits/stdc++.h>
@@ -20,7 +21,7 @@ class Solution {
       //insert all the nodes with indegree 0 into the queue
       queue<int> q;
       for(int i=0;i<N;i++) {
-        //someone will have indegree=0 as it is DAG 
+        //at least one node  will have indegree=0 as it is DAG 
         if(indegree[i]==0) q.push(i);
       }
 
