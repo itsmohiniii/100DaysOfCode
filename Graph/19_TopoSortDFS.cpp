@@ -16,6 +16,8 @@ class Solution {
     }
 
   public:
+    //SC: O(N)+O(N)+O(N) for vis array, for recursion stack space, for st stack
+    //TC: O(N)+O(N+E) for outer For loop, for overall dfs directed graph
     vector<int> topoSort(int N, vector<int> adj[]) {
       int vis[N]={0};
       stack<int> st;
