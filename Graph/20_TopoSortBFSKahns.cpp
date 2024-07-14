@@ -6,6 +6,8 @@ using namespace std;
 
 class Solution {
   public: 
+    //TC: O(N+E) for overall bfs of graph
+    //SC: O(N)+O(N) for indegree array, for queue 
     vector<int> topoSort (int N, vector<int> adj[]) {
       int indegree[N] = {0};
       for(int i=0;i<N;i++) {
@@ -16,6 +18,7 @@ class Solution {
       
       queue<int> q;
       for(int i=0;i<N;i++) {
+        //someone will have indegree=0 as it is DAG 
         if(indegree[i]==0) q.push(i);
       }
       
@@ -23,10 +26,10 @@ class Solution {
       while(!q.empty()) {
         int node = q.front();
         q.pop();
-        topo.push_back(node);
+        topo.push_back(node); 
         
         for(auto it: adj[node]) {
-          indegree[it]--;
+          indegree[it]--; //node is the topo vector now, so remove it from the indegree of its adjacent nodes
           if(indegree[it]==0) q.push(it);
         }
       }
