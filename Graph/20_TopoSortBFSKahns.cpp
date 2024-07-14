@@ -10,19 +10,24 @@ class Solution {
     //SC: O(N)+O(N) for indegree array, for queue 
     vector<int> topoSort (int N, vector<int> adj[]) {
       int indegree[N] = {0};
+
+      //find the indegree of all nodes
       for(int i=0;i<N;i++) {
         for(auto it: adj[i]) {
           indegree[it]++;
         }
       }
-      
+
+      //insert all the nodes with indegree 0 into the queue
       queue<int> q;
       for(int i=0;i<N;i++) {
         //someone will have indegree=0 as it is DAG 
         if(indegree[i]==0) q.push(i);
       }
-      
+
       vector<int> topo;
+
+      //take the node out of the queue, store in topo vector,  and reduce the indegree of adjacent nodes
       while(!q.empty()) {
         int node = q.front();
         q.pop();
