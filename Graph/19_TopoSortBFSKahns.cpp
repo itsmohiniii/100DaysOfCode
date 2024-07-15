@@ -25,7 +25,7 @@ class Solution {
         if(indegree[i]==0) q.push(i);
       }
 
-      //take the node out of the queue, store in topo vector,  and reduce the indegree of adjacent nodes
+      //take the node out of the queue, store in topo vector,  and reduce the indegree (i.e. remove the incoming edges) of adjacent nodes
       vector<int> topo;
       while(!q.empty()) {
         int node = q.front();
