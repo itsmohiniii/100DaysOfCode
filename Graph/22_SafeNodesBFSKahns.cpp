@@ -1,5 +1,5 @@
 //Find eventual safe states (BFS | Kahn's Algo | Topo sort)
-// Intuition: 
+// Intuition: All terminal nodes (with outdegree=0) are safe Nodes.
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -10,13 +10,13 @@ class Solution {
     //SC: same as Toposort + O(N) for adjRev
     vector<int> findSafeNodes(int N, vector<int> adj[]) {
       
-      //reverse the edges of graph and store the indegree
+      //reverse the edges of graph and hence, outdegree of graph = indegree of reversed graph
       vector<int> adjRev[N];
       int indegree[N] = {0};
       for(int i=0;i<N;i++) {
         for(auto it: adj[i]) {  // i→it
           adjRev[it].push_back(i);  // it→i
-          indegree[i]++;
+          indegree[i]++; //store the indegree of reversed graph
         }
       }
 
