@@ -32,7 +32,7 @@ class Solution {
         q.pop();
         safeNodes.push_back(node); //queue has only safeNodes 
         for(auto it: adjRev[node]) {
-          indegree[it]--;
+          indegree[it]--; //do a removal of edges on adjacent nodes
           if(indegree[it]==0) q.push(it);
         }
       }
