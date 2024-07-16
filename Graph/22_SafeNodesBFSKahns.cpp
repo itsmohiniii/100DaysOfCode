@@ -1,25 +1,26 @@
 //Find eventual safe states (BFS | Kahn's Algo | Topo sort)
+// Intuition: 
 
 #include<bits/stdc++.h>
 using namespace std;
 
 class Solution {
   public:
+    //TC: same as Toposort + O(NlogN) for sorting the safeNodes WC -> O(NlogN)
+    //SC: same as Toposort + O(N) for adjRev
     vector<int> findSafeNodes(int N, vector<int> adj[]) {
+      
+      //reverse the edges of graph and store the indegree
       vector<int> adjRev[N];
+      int indegree[N] = {0};
       for(int i=0;i<N;i++) {
         for(auto it: adj[i]) {  // i→it
           adjRev[it].push_back(i);  // it→i
+          indegree[i]++;
         }
       }
 
-      int indegree[N] = {0};
-      for(int i=0;i<N;i++) {
-        for(auto it: adjRev[i]) {
-          indegree[it]++;
-        }
-      }
-      
+      //identify the terminal nodes and push into queue. 
       queue<int> q;
       for(int i=0;i<N;i++) {
         if(indegree[i]==0) q.push(i);
@@ -29,7 +30,7 @@ class Solution {
       while(!q.empty()) {
         int node = q.front();
         q.pop();
-        safeNodes.push_back(node);
+        safeNodes.push_back(node); //queue has only safeNodes 
         for(auto it: adjRev[node]) {
           indegree[it]--;
           if(indegree[it]==0) q.push(it);
