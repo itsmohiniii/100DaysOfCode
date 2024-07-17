@@ -30,6 +30,7 @@ class Solution {
   }
 
   public:
+  //Assuming that the order of alphabets is always possible (the dictionary is correct)
   string findOrderOfAlphabets (int N, int K, string dict[]) {
     vector<int> adj[K];
     for(int i=0;i<N-1;i++) { //iterate till second last string
@@ -63,3 +64,9 @@ int main () {
   cout<<obj.findOrderOfAlphabets(N, K,dict);
   return 0;
 }
+
+// When is the order of alphabets not possible?
+// 1. If all the characters match and the larger string is before the shorter string, then order is not possible (Wrong dictionary)
+//    eg, abcd comes before abc => not possible 
+// 2. Cyclic dependency => wrong dictionary (For a cycle, toposort is not possible)
+//    eg, abc -> bat -> ade. Acc to this, a->b and b->a which is impossible. 
