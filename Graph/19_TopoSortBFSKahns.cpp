@@ -9,6 +9,7 @@ class Solution {
   public: 
     //TC: O(N+E) for overall bfs of graph
     //SC: O(N)+O(N) for indegree array, for queue 
+    //this works for multiple connected components as well
     vector<int> topoSort (int N, vector<int> adj[]) {
       //find the indegree of all nodes
       int indegree[N] = {0};
