@@ -1,5 +1,11 @@
 //Alien Dictionary (Toposort using BFS)
 
+// When is the order of alphabets not possible?
+// 1. If all the characters match and the larger string is before the shorter string, then order is not possible (Wrong dictionary)
+//    eg, abcd comes before abc => not possible 
+// 2. Cyclic dependency => wrong dictionary (For a cycle, toposort is not possible)
+//    eg, abc -> bad -> ad. Acc to this, a->b and b->a which is impossible. 
+
 #include<bits/stdc++.h>
 using namespace std;
 
