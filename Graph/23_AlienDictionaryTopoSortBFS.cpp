@@ -37,6 +37,7 @@ class Solution {
     }
 
   public:
+  //Assuming that the order of alphabets is not always possible (the given dictionary can be wrong)
   string findOrderOfAlphabets (int N, int K, string dict[]) {
     vector<int> adj[K];
     for(int i=0;i<N-1;i++) { //iterate till second last string
