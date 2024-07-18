@@ -1,4 +1,4 @@
-//Alien Dictionary (Toposort using BFS)
+//Alien Dictionary (Toposort using BFS) (Assuming the given dictionary can be wrong)
 
 // When is the order of alphabets not possible?
 // 1. If all the characters match and the larger string is before the shorter string, then order is not possible (Wrong dictionary)
