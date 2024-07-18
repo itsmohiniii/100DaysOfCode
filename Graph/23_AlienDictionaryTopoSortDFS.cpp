@@ -1,4 +1,5 @@
-//Alien Dictionary (Toposort using DFS)
+//Alien Dictionary (Toposort using DFS) (Assuming the given dictionary is correct)
+//Can be solved using Toposort BFS also.
 // Problem Link: https://www.geeksforgeeks.org/problems/alien-dictionary/1
 
 #include<bits/stdc++.h>
