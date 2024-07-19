@@ -15,7 +15,7 @@ class Solution {
           dfs(it, adj, vis, st);
         }
       }
-      st.push(node);
+      st.push(node); //when the dfs call for a node is over, push it into the stack
     }
 
   public:
