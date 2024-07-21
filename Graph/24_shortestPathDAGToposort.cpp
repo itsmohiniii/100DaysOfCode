@@ -26,6 +26,7 @@ class Solution {
     }
     
     //find the toposort
+    //TC:O(N+M) where N=#nodes, M=#edges 
     int vis[N]={0};
     stack<int> st;
     topoSortDFS(src,adj, vis, st);
@@ -33,16 +34,17 @@ class Solution {
     //do the distance thing
     vector<int> dist(N);
     for(int i=0;i<N;i++) {
-      dist[i]=INT_MAX; //INT_MAX or 1e9
+      dist[i]=INT_MAX; 
     }
     dist[src]=0;
 
-    while(!st.empty()) {
+    //TC:O(N+M) where N=#nodes, M=#edges
+    while(!st.empty()) {  //stack can have max N elements hence, TC:O(N)
       int node = st.top();
       st.pop();
       int distnode = dist[node]; //dist to reach from src to node
       
-      for(auto it: adj[node]) {
+      for(auto it: adj[node]) { //in total for all nodes in stack, it will run for M times i.e. total no. of edges, hence, TC:O(M)
         int v = it.first;
         int wt = it.second; //dist to reach from node(u) to v
         dist[v] = min(dist[v], distnode + wt);
