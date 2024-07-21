@@ -10,6 +10,8 @@ class Solution {
   int wordLadderLength(string startWord, string targetWord, vector<string>& wordList) {
     queue<pair<string,int>> q;
     q.push({startWord,1});
+
+    //searching in vector or array will take a lot of time, hence copied wordList into set data structure
     // set<string> st(wordList.begin(),wordList.end()); //find()=> TC:O(logN)
     unordered_set<string> st(wordList.begin(),wordList.end()); //find() => amortized TC: O(1), WC TC : O(N)
     st.erase(startWord);
