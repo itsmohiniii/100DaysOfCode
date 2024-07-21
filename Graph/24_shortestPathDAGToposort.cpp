@@ -1,4 +1,6 @@
 // Shortest Path in DAG (Toposort | using BFS or DFS)
+//Problem Statement: You are given a DAG having edge weights, find the shortest path from a given src to all the vertex 
+                  // and if it is unreachable to reach any vertex from src, then return -1 for that vertex.
 //Approach: Toposort + Relaxation of edges 
 //Intuition: Finding the shortest path to a vertex is easy if you already know the shortest paths to all the vertices that can precede it. 
           // Topological sorting guarantees that every incoming edge to u is already considered, therefore we already know the shortest path to u 
