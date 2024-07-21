@@ -1,4 +1,8 @@
 // Shortest Path in DAG (Toposort | using BFS or DFS)
+//Intuition: Finding the shortest path to a vertex is easy if you already know the shortest paths to all the vertices that can precede it. 
+          // Topological sorting guarantees that every incoming edge to u is already considered, therefore we already know the shortest path to u 
+          // and now we are able to find the shortest path to the next vertex and so on till the bottom vertex will be reached.
+//Dijkstra algorithm - used for cyclic graphs, bcuz they cant be topologically sorted.
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -29,7 +33,10 @@ class Solution {
     //TC:O(N+M) where N=#nodes, M=#edges 
     int vis[N]={0};
     stack<int> st;
-    topoSortDFS(src,adj, vis, st);
+    //We do not need to call the topoSort for all the disconnected components since we are only interested in src node.
+    //Anyhow we can't reach the disconnected components from our source node. so the distance will be infinity, hence, -1.
+    //this will also ensure the src node is always at the top of the stack.
+    topoSortDFS(src,adj, vis, st); 
     
     //do the distance thing
     vector<int> dist(N);
