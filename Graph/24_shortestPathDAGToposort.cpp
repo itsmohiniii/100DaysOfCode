@@ -1,4 +1,5 @@
 // Shortest Path in DAG (Toposort | using BFS or DFS)
+//Approach: Toposort + Relaxation of edges 
 //Intuition: Finding the shortest path to a vertex is easy if you already know the shortest paths to all the vertices that can precede it. 
           // Topological sorting guarantees that every incoming edge to u is already considered, therefore we already know the shortest path to u 
           // and now we are able to find the shortest path to the next vertex and so on till the bottom vertex will be reached.
@@ -38,13 +39,13 @@ class Solution {
     //this will also ensure the src node is always at the top of the stack.
     topoSortDFS(src,adj, vis, st); 
     
-    //do the distance thing
+    //do the distance thing : take the nodes out of the stack one by one & relax the edges.
     vector<int> dist(N);
     for(int i=0;i<N;i++) {
       dist[i]=INT_MAX; 
     }
     dist[src]=0;
-
+            
     //TC:O(N+M) where N=#nodes, M=#edges
     while(!st.empty()) {  //stack can have max N elements hence, TC:O(N)
       int node = st.top();
