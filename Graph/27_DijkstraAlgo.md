@@ -1,8 +1,10 @@
 Dijkstra algo can be implemented using following 3 ways :   
-1. using Queue  
+1. using Queue (least optimised way)  
 2. using Priority queue (min heap)  
-3. using Set
+3. using Set (best way)  
   
+
+
   
 Dijkstra Algorithm is only applicable for graphs with positive weights.  
 Not applicable to graphs with negative weight.  
