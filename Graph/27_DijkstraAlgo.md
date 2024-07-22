@@ -1,9 +1,11 @@
-**Dijkstra algo can be implemented using following 3 ways :   **
+Dijkstra algo can be implemented using following 3 ways :   
 1. using Queue (least optimised way)  
 2. using Priority queue (min heap)  
 3. using Set (best way)  
   
 **Why PQ and not Q?**
+Brute force (queue) -> If we use queue, we will explore all possible paths and then figure our the minimal. (unnecesaary exploration of paths, unnecessary iterations, hence more time complexity)
+PQ -> Using PQ, we will always go to the minimal first, minimal first and so on (greedy algorithm) so that we can mark all the minimal distances first and then go to the others, and then we will not need to explore those paths.
 
   
   
