@@ -9,10 +9,8 @@ class Solution {
     //Assuming a connected graph 
     //TC: O(ElogN) where E->#edges, N->#nodes
     vector<int> shortestPathDijkstra(int N, vector<vector<int>> adj[], int src) {
-      vector<int> dist(N);
-      for(int i=0;i<N;i++) dist[i]=1e9; //marked as infinite
-      //declare a set storing {dist,node}
-      set<pair<int,int>> st;
+      vector<int> dist(N, 1e9);
+      set<pair<int,int>> st; //declare a set storing {dist,node}
 
       dist[src]=0;
       st.insert({0,src});
