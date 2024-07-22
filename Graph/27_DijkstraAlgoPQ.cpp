@@ -1,6 +1,9 @@
 //shortest Path using Dijkstra Algorithm (using Priority Queue - minHeap)
 //Undirected graph with edge weights 
 
+//Priority queue (min heap):
+// 1. stores minimum value at the top
+
 #include<bits/stdc++.h>
 using namespace std;
 
