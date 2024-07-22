@@ -1,6 +1,10 @@
 //shortest Path using Dijkstra Algorithm (using Set)
 //Undirected graph with edge weights 
 
+//Set Data structure:
+// 1. stores unique elements
+// 2. stores in ascending order (smallest at the top)
+
 #include<bits/stdc++.h>
 using namespace std;
 
