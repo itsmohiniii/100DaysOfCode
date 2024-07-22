@@ -7,6 +7,7 @@ using namespace std;
 class Solution {
   public:
     //Assuming a connected graph 
+    //TC: O(ElogN) where E->#edges, N->#nodes
     vector<int> shortestPathDijkstra(int N, vector<vector<int>> adj[], int src) {
       vector<int> dist(N);
       for(int i=0;i<N;i++) dist[i]=1e9; //marked as infinite
