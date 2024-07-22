@@ -26,8 +26,9 @@ class Solution {
           int edgeW = it[1];
 
           if(dis+ edgeW < dist[adjNode]) {
-            if(dist[adjNode] != 1e9) {
-                st.erase({dist[adjNode], adjNode});
+            //erase if already existing path
+            if(dist[adjNode] != 1e9) { //that means someone reached this adjNode before us
+                st.erase({dist[adjNode], adjNode}); //TC:O(logN)
             }
             dist[adjNode] = dis + edgeW;
             st.insert({dist[adjNode], adjNode});
