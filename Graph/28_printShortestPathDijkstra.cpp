@@ -45,14 +45,14 @@ class Solution {
     }
     
     if(dist[n]==1e9) return {-1};
-    vector<int> path; //path-> [wt, ...path]
+    vector<int> path; //path-> [dist, ...path]
     int node = n;
     while(parent[node]!=node) {
       path.push_back(node);
       node = parent[node];
     }
     path.push_back(1);
-    path.push_back(dist[n]);
+    path.push_back(dist[n]); //for storing dist
     reverse(path.begin(), path.end());
     return path;
   }
