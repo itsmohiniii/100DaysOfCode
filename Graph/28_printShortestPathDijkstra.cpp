@@ -52,7 +52,7 @@ class Solution {
       node = parent[node];
     }
     path.push_back(1);
-    path.push_back(dist[n]); //for storing dist
+    path.push_back(dist[n]); //dist from node 1 to n
     reverse(path.begin(), path.end());
     return path;
   }
