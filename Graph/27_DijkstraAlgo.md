@@ -24,6 +24,12 @@ Pseudocode of Priority Queue :
   
 ![image](https://github.com/user-attachments/assets/b34ffae0-0055-4716-bff5-9369ff265469)
 
+WC scenario:   
+Lets consider the most dense graph possible where every node is connected to every other node)  
+that means every node has V-1 edges.
+![image](https://github.com/user-attachments/assets/555529da-b1f1-4036-bcd4-33c4351c2786)  
+
+
 Derivation:
 
 O( V * ( pop vertex from min heap + no. of edges on each vertex * push in PQ ))
