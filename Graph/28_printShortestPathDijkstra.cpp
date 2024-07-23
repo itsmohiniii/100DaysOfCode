@@ -1,5 +1,6 @@
 // print shortest Path from node 1 to n (using Dijkstra)
 // Weighted Undirected graph (1-based indexing)
+// Intuition: Remember where I am coming from (caching/memoization)
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -19,7 +20,7 @@ class Solution {
     
     priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq; //{dist,node}
     vector<int> dist(n+1, 1e9);
-    vector<int> parent(n+1);
+    vector<int> parent(n+1); //for memoization
     for(int i=1;i<=n;i++) {
       parent[i]=i;
     }
