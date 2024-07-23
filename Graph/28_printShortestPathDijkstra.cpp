@@ -7,6 +7,7 @@ using namespace std;
 
 class Solution {
   public: 
+  //TC: O(ElogN)+O(N) 
   vector<int> printShortestPath(int n, int m, vector<vector<int>>& edges) {
     //create the graph
     vector<pair<int,int>> adj[n+1]; 
@@ -48,6 +49,7 @@ class Solution {
     if(dist[n]==1e9) return {-1}; //if no path from 1 to n (unable to reach dest from src) 
     vector<int> path; //path-> [dist, ...path]
     int node = n;
+    //TC: O(N) WC: if it is a linear graph, we will go to all nodes while backtracking the path
     while(parent[node]!=node) {
       path.push_back(node);
       node = parent[node];
