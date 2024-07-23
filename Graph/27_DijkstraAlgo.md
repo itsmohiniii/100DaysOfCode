@@ -16,7 +16,9 @@ Not applicable to graphs with negative weight.
 
 
     
-**TC Derivation of Dijkstra's Algorithm:**
+**TC Derivation of Dijkstra's Algorithm:**  
+
+TC: O(ElogV) where E-> no. of edges, V-> no. of nodes/vertices
 
 Pseudocode of Priority Queue :  
   
