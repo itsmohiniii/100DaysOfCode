@@ -51,7 +51,7 @@ O( V * V * log(v²))
 
 O ( v² * 2 log (V))
 
-O ( E * 2 log(V))  { E= v², total number of edges}
+O ( E * 2 log(V))  { E= v², total number of edges as every node has (V-1) edges, hence, E = (V-1)*V ~ v²}
 
 O ( E * log(V))  Worst case Time Complexity of Dijkstra’s Algorithm.
 
