@@ -45,7 +45,7 @@ O( V * V * log(heapSize))
 
 Now, at the worst case the heapSize will be equivalent to v²  
 as if we consider pushing adjacent elements of a node into the PQ, at the WC each element will have V-1 nodes and they all will be pushed onto the queue if we keep on finding minimal distances.  
-In the PQ, there will be (V-1)+(V-1)+(V-1)+....V times ~ v²
+In the PQ, there will be (V-1)+(V-1)+(V-1)+....V times ~ (V-1)*V ~ v²
 
 O( V * V * log(v²))
 
