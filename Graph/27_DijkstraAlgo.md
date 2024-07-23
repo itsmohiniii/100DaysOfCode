@@ -12,11 +12,11 @@ PQ -> Using PQ, we will always go to the minimal first, minimal first and so on 
 Dijkstra Algorithm is only applicable for graphs with positive weights.  
 Not applicable to graphs with negative weight.  
   
-![image](https://github.com/user-attachments/assets/e5fb57ce-8587-4ca7-b838-234b3e2ba0ba)  
+![image](https://github.com/user-attachments/assets/e5fb57ce-8587-4ca7-b838-234b3e2ba0ba)    
 
 
     
-**TC Derivation of Dijkstra's Algorithm: **
+**TC Derivation of Dijkstra's Algorithm:**
 
 Pseudocode of Priority Queue :  
   
