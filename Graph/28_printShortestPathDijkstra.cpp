@@ -45,7 +45,7 @@ class Solution {
       }
     }
     
-    if(dist[n]==1e9) return {-1};
+    if(dist[n]==1e9) return {-1}; //if no path from 1 to n (unable to reach dest from src) 
     vector<int> path; //path-> [dist, ...path]
     int node = n;
     while(parent[node]!=node) {
