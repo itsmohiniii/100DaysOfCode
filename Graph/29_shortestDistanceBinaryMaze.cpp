@@ -7,6 +7,10 @@
 //So, shortest distance will be considered first (as using BFS so levelwise)
 //Hence, TC will be better as O(logN) factor will be removed.
 
+//Note: BFS works here because it doesn’t consider a single path at once. 
+//It considers all the paths starting from the src and moves ahead one unit in all those paths at the same time which makes sure 
+//that the first time when the destination is visited, it is the shortest path.
+
 // DP won't work as the value on any cell is path-dependent, so it won't work. 
 // It works in the maze which has two direction movements in the right and bottom, and the future cells would never be visited. 
 // Think about it by taking some examples. 
