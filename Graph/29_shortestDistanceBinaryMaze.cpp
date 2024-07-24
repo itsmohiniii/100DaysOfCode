@@ -2,6 +2,11 @@
 // shortest Path between source cell and destination cell
 //given grid is like a graph with unit weights (assume unit weights as its not given)
 
+//Intuition: use a queue instead of PQ 
+//bcuz we do not have different edge weights in this grid (unit weights), so, queue will already store in increasing order.
+//So, shortest distance will be considered first (as using BFS so levelwise)
+//Hence, TC will be better as O(logN) factor will be removed.
+
 // DP won't work as the value on any cell is path-dependent, so it won't work. 
 // It works in the maze which has two direction movements in the right and bottom, and the future cells would never be visited. 
 // Think about it by taking some examples. 
