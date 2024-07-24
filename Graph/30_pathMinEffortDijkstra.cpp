@@ -11,9 +11,12 @@ class Solution {
   }
 
   public:
+  //TC: O(ElogV) = O(N*M*4 * log(N*M)) as total edges = N*M*4 (every node has 4 edges), total nodes = N*M
+  //SC: ~ O(N*M) for effort 2D array, for PQ
   int minimumEffort(vector<vector<int>>& heights, int n, int m) { //n=#rows, m=#columns
-    //PQ -> {effort, {row,col}}
-    priority_queue< pair<int, pair<int,int>>, vector<pair<int, pair<int,int>>>, greater<pair<int, pair<int,int>>>> pq;
+    priority_queue< pair<int, pair<int,int>>, vector<pair<int, pair<int,int>>>, greater<pair<int, pair<int,int>>>> pq; //PQ -> {effort, {row,col}}
+
+    //SC: O(N*M) for effort 2D vector
     vector<vector<int>> effort(n, vector<int>(m, 1e9)); //effort = max(all differences in the path)
     effort[0][0] = 0;
     pq.push({0,{0,0}});
