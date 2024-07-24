@@ -2,6 +2,10 @@
 // shortest Path between source cell and destination cell
 //given grid is like a graph with unit weights (assume unit weights as its not given)
 
+// DP won't work as the value on any cell is path-dependent, so it won't work. 
+// It works in the maze which has two direction movements in the right and bottom, and the future cells would never be visited. 
+// Think about it by taking some examples. 
+
 #include<bits/stdc++.h>
 using namespace std;
 
