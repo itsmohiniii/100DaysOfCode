@@ -1,4 +1,5 @@
 //Path with minimum effort (using Dijkstra -> PQ)
+//taken PQ or set (not queue) because we have to find the minimum effort. Also, graph has diff edge weights.
 
 #include<bits/stdc++.h>
 using namespace std;
