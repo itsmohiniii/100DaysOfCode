@@ -10,6 +10,7 @@ tend to store the value of subproblems in some map/table.
 Recursion tree for Fibonacci number (n=5):  
 0-based indexing   
   
-![image](https://github.com/user-attachments/assets/3e061ed9-0888-4455-ac4a-1b32b5d98c16)
+![image](https://github.com/user-attachments/assets/de9007bd-56ab-461b-a868-ae09172d46d7)
+
 
  
