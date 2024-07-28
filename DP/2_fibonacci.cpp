@@ -40,10 +40,10 @@ int fib_Tabulation(int n){
 // TC:O(N) 
 // SC:O(1) as no need of dp array
 int fib_SO(int n){
-    //Step2: initialise Base case values
+    //Step1: initialise Base case values
     int prev2 = 0;
     int prev = 1;
-    //Step3: 
+    //Step2: 
     for(int i=2; i<=n; i++) {
         int curi = prev + prev2;
         prev2 = prev;
