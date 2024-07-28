@@ -23,7 +23,7 @@ int fib(int n, vector<int> &dp){  //call by reference
 // TC:O(N) 
 // SC:O(N) for dp array
 int fib(int n, vector<int> &dp){
-    //Step2: write Base cases
+    //Step2: initialise Base case values
     dp[0] = 0;
     dp[1] = 1;
     //Step3: recursion relation : f(n) = f(n-1) + f(n-2). Replace f by dp.
@@ -34,10 +34,11 @@ int fib(int n, vector<int> &dp){
 }
 
 // Space optimisation (Tabulation) 
+// we see that for any i, we do need only the last two values in the array. So is there a need to maintain a whole array for it? No.
 // TC:O(N) 
 // SC:O(1) as no need of dp array
 int fib(int n){
-    //Step2: write Base cases
+    //Step2: initialise Base case values
     int prev2 = 0;
     int prev = 1;
     //Step3: 
