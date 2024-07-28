@@ -2,7 +2,7 @@
 // 0-based indexing
 // Recurrence relation: f(n) = f(n-1) + f(n-2)
 
-//3 steps for converting a recursive soltion to DP solution (using Memoization) 
+//3 steps for converting a recursive soltion to DP solution (using Memoization and using Tabulation) 
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -17,6 +17,19 @@ int fib(int n, vector<int> &dp){  //call by reference
     if(dp[n] != -1) return dp[n];
     //Step2: store the answer to subproblem in dp array
     return dp[n] = fib(n-1, dp) +fib(n-2, dp);
+}
+
+// Tabulation (bottom up) 
+// TC:O(N) 
+// SC:O(N) for dp array
+int fib(int n, vector<int> &dp){
+    //Step2: write Base cases
+    dp[0] = 0;
+    dp[1] = 1;
+    //Step3: recursion relation : f(n) = f(n-1) + f(n-2). Replace f by dp.
+    for(int i=2; i<=n; i++) {
+        dp[i] = dp[i-1] + dp[i-2];
+    }
 }
 
 int main() {
