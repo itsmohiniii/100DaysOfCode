@@ -30,6 +30,23 @@ int fib(int n, vector<int> &dp){
     for(int i=2; i<=n; i++) {
         dp[i] = dp[i-1] + dp[i-2];
     }
+    return dp[n];
+}
+
+// Space optimisation (Tabulation) 
+// TC:O(N) 
+// SC:O(1) as no need of dp array
+int fib(int n){
+    //Step2: write Base cases
+    int prev2 = 0;
+    int prev = 1;
+    //Step3: 
+    for(int i=2; i<=n; i++) {
+        int curi = prev + prev2;
+        prev2 = prev;
+        prev = curi;
+    }
+    return prev;
 }
 
 int main() {
