@@ -60,10 +60,11 @@ int main() {
     // if array is used instead of vector
     // int dp[n+1];
     // memset(dp, -1, sizeof dp);
+    cout<<fib_Memoization(n, dp)<<endl; //Ouput: 5
     
-    cout<<fib_Memoization(n, dp)<<endl;
-    cout<<fib_Tabulation(n)<<endl;
-    cout<<fib_SO(n)<<endl;
+    cout<<fib_Tabulation(n)<<endl; //Ouput: 5
+    
+    cout<<fib_SO(n)<<endl; //Ouput: 5
     
     return 0;
 }
