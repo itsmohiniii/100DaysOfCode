@@ -11,18 +11,20 @@ using namespace std;
 // TC:O(N) as it takes linear time bcuz for every value of n, one call is made which is computed 
 // and all other calls are for previously stored values which take O(1) constant time.
 // SC:O(N)+O(N) recursion stack space + dp array
-int fib(int n, vector<int> &dp){  //call by reference
+int fib_Memoization(int n, vector<int> &dp){  //call by reference
     if(n<=1) return n;
     //Step3: check whether the subproblem has been previouly solved    
     if(dp[n] != -1) return dp[n];
     //Step2: store the answer to subproblem in dp array
-    return dp[n] = fib(n-1, dp) +fib(n-2, dp);
+    return dp[n] = fib_Memoization(n-1, dp) + fib_Memoization(n-2, dp);
 }
 
 // Tabulation (bottom up) 
 // TC:O(N) 
 // SC:O(N) for dp array
-int fib(int n, vector<int> &dp){
+int fib_Tabulation(int n){
+    //Step1: declare a dp array or vector 
+    int dp[n+1];
     //Step2: initialise Base case values
     dp[0] = 0;
     dp[1] = 1;
@@ -37,7 +39,7 @@ int fib(int n, vector<int> &dp){
 // we see that for any i, we do need only the last two values in the array. So is there a need to maintain a whole array for it? No.
 // TC:O(N) 
 // SC:O(1) as no need of dp array
-int fib(int n){
+int fib_SO(int n){
     //Step2: initialise Base case values
     int prev2 = 0;
     int prev = 1;
@@ -59,7 +61,9 @@ int main() {
     // int dp[n+1];
     // memset(dp, -1, sizeof dp);
     
-    cout<<fib(n, dp);
+    cout<<fib_Memoization(n, dp)<<endl;
+    cout<<fib_Tabulation(n)<<endl;
+    cout<<fib_SO(n)<<endl;
     
     return 0;
 }
