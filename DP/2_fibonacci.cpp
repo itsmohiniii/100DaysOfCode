@@ -8,7 +8,8 @@
 using namespace std;
 
 // Memoization (recursion way - top down) 
-// TC:O(N) SC:O(N)+O(N) recursion stack space + dp array
+// TC:O(N) as it takes linear time bcuz for every vale of n, one call is made and all other calls are for prviously stored values which take O(1) constant time.
+// SC:O(N)+O(N) recursion stack space + dp array
 int fib(int n, vector<int> &dp){  //call by reference
     if(n<=1) return n;
     //Step3: check whether the subproblem has been previouly solved    
