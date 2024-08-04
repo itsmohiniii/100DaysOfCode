@@ -21,11 +21,13 @@ Ancestors
 5. Degenerate BT
 
 **Full Binary Tree**  
-every node either has 0 or 2 children. 
-Full BT:   
+every node either has 0 or 2 children.  
+Full BT:  
+  
 ![image](https://github.com/user-attachments/assets/0b741865-a0e0-4894-8ed4-2f0b92fa61d1)  
-
-not a Full BT:
+  
+not a Full BT:  
+   
 ![image](https://github.com/user-attachments/assets/a352248c-d8ac-4b29-8a09-a5b206373b3a)
 
 
