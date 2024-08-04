@@ -28,7 +28,16 @@ Full BT:
   
 not a Full BT:  
    
-![image](https://github.com/user-attachments/assets/a352248c-d8ac-4b29-8a09-a5b206373b3a)
+![image](https://github.com/user-attachments/assets/a352248c-d8ac-4b29-8a09-a5b206373b3a)  
+
+**Complete Binary Tree**  
+
+![image](https://github.com/user-attachments/assets/33c93cb3-675b-4571-9bb7-7df03662d325)
+
+Not a Complete BT:  
+
+![image](https://github.com/user-attachments/assets/a86cd45c-3934-4c3b-b9c4-14beb8708d4e)
+  
 
 
 
