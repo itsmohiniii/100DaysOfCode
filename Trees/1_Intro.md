@@ -23,6 +23,7 @@ Ancestors
 **I. Full Binary Tree**  
   
 every node either has 0 or 2 children.  
+  
 Full BT:  
   
 ![image](https://github.com/user-attachments/assets/0b741865-a0e0-4894-8ed4-2f0b92fa61d1)  
@@ -37,7 +38,21 @@ not a Full BT:
 
 Not a Complete BT:  
 
-![image](https://github.com/user-attachments/assets/a86cd45c-3934-4c3b-b9c4-14beb8708d4e)
+![image](https://github.com/user-attachments/assets/a86cd45c-3934-4c3b-b9c4-14beb8708d4e)  
+
+**III. Perfect Binary Tree**  
+
+![image](https://github.com/user-attachments/assets/c22171e3-21be-4631-877e-686ce6c40dd9)  
+
+Perfect BT:    
+![image](https://github.com/user-attachments/assets/72c8ea69-acd8-4d17-99b2-97291b824c74)
+
+Not a Perfect BT:   
+![image](https://github.com/user-attachments/assets/7cb0237d-d977-461d-8e16-cb1f45f6fa8e)
+
+
+
+  
   
 
 
