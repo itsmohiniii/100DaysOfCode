@@ -2,9 +2,9 @@ Linear DS - array, stack, queue, Linked list, etc
 Hierarchical DS - trees, etc (eg, folder structure in computer)  
   
 Binary means 0 or 1.  
-Binary Tree - a hierarchical data structure which has at max 2 children nodes.
+**Binary Tree** - a hierarchical data structure which has at max 2 children nodes.
 
-Commonly used terms in trees:  
+**Commonly used terms in trees:**  
 Root   
 Children  
 Leaf node - a node which doesn't have children.  
