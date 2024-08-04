@@ -15,10 +15,10 @@ Ancestors
 
 **Types of Binary Tree**   
 1. Full Binary tree
-2. Complete BT
-3. Perfect BT
-4. Balanced BT
-5. Degenerate BT
+2. Complete Binary tree
+3. Perfect Binary tree
+4. Balanced Binary tree
+5. Degenerate Tree
 
 **I. Full Binary Tree**  
   
@@ -45,10 +45,37 @@ Not a Complete BT:
 ![image](https://github.com/user-attachments/assets/c22171e3-21be-4631-877e-686ce6c40dd9)  
 
 Perfect BT:    
+  
 ![image](https://github.com/user-attachments/assets/72c8ea69-acd8-4d17-99b2-97291b824c74)
 
 Not a Perfect BT:   
-![image](https://github.com/user-attachments/assets/7cb0237d-d977-461d-8e16-cb1f45f6fa8e)
+  
+![image](https://github.com/user-attachments/assets/7cb0237d-d977-461d-8e16-cb1f45f6fa8e)  
+
+**IV. Balanced Binary Tree**  
+
+generally used for efficient search or to improve the time complexity in BST.   
+
+![image](https://github.com/user-attachments/assets/7be6bc2d-9d48-4c86-84d4-4ba8dfcb3025)  
+
+Not a Balanced BT (for n=8 nodes):  
+
+![image](https://github.com/user-attachments/assets/21fe3a9a-4442-4ee7-a5e2-caf244312dd5)  
+
+**V. Degenerate Tree**  
+
+a skewed tree or a linked list where every node has a single child.  
+
+Degenerate tree example (if n=4 nodes):  
+
+![image](https://github.com/user-attachments/assets/acac2679-3b06-47d7-89ce-6c43298a4226)
+  
+   
+
+  
+  
+  
+  
 
 
 
