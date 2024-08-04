@@ -20,7 +20,8 @@ Ancestors
 4. Balanced BT
 5. Degenerate BT
 
-**Full Binary Tree**  
+**I. Full Binary Tree**  
+  
 every node either has 0 or 2 children.  
 Full BT:  
   
@@ -30,7 +31,7 @@ not a Full BT:
    
 ![image](https://github.com/user-attachments/assets/a352248c-d8ac-4b29-8a09-a5b206373b3a)  
 
-**Complete Binary Tree**  
+**II. Complete Binary Tree**  
 
 ![image](https://github.com/user-attachments/assets/33c93cb3-675b-4571-9bb7-7df03662d325)
 
