@@ -13,7 +13,7 @@ class Node {
 };
 
 //TC: O(N) where n->#nodes as each node of the binary tree is visited exactly once.
-//SC: O(N) for auxiliary stack space in recursion -> WC: height of tree = N (if skewed tree)
+//SC: O(N) for auxiliary stack space of recursion -> WC: height of tree = N (if skewed tree)
 // Print Left Right
 void preOrder(Node* root) {
   if(root==nullptr) { //base case: leaf node
