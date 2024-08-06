@@ -18,7 +18,7 @@ class Node {
 //TC: O(N) where n->#nodes as each node of the binary tree is visited exactly once.
 //SC: O(N) for auxiliary stack space in recursion -> WC: height of tree = N (if skewed tree)
 void preOrder(Node* root) {
-  if(root==nullptr) {
+  if(root==nullptr) { //base case: leaf node
     return;
   }
   cout<<root->data<<" ";
