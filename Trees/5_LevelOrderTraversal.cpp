@@ -33,7 +33,7 @@ public:
   //TC: O(N) as we traverse for N nodes.
   //SC: O(N) for queue WC: queue can store N nodes at a time
   vector<vector<int>> levelOrder(TreeNode* root) {
-    //not considering SC for 'ans' data structure as we are returning it  
+    //we do not consider SC for 'ans' data structure as we are storing the answer and returning it. 
     vector<vector<int>> ans;
     if(root == nullptr) return ans;
     
