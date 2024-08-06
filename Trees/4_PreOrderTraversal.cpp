@@ -1,5 +1,5 @@
 //Pre-order Traversal in Binary Tree
-//Root Left Right
+//Print Left Right
 
 #include<bits/stdc++.h>
 using namespace std;
