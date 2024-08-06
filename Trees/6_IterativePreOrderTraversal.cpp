@@ -37,7 +37,7 @@ public:
     if(root == NULL) return preorder;
     
     stack<TreeNode*> st; //LIFO
-    st.push(root);;
+    st.push(root);
     
     while(!st.empty()) {
       TreeNode* node = st.top();
