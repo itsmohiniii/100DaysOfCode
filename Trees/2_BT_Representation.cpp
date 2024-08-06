@@ -10,6 +10,7 @@ class Node {
   Node* right;
   Node(int val) { //constructor 
     data = val;
+    // left = right = NULL;
     left = nullptr;
     right = NULL;
   }
