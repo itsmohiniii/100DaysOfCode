@@ -34,6 +34,16 @@ void inOrder(Node* root) {
   inOrder(root->right);
 }
 
+//Left Right Print
+void postOrder(Node* root) {
+  if(root==nullptr) {
+    return;
+  }
+  postOrder(root->left);
+  postOrder(root->right);
+  cout<<root->data<<" ";
+}
+
 int main() {
   Node* root = new Node(1);
   root->left = new Node(2);
@@ -45,6 +55,9 @@ int main() {
   cout<<endl;
   
   inOrder(root); //Output: 4 2 5 1 3 
+  cout<<endl;
+  
+  postOrder(root); //Output: 4 5 2 3 1 
   cout<<endl;
   
   return 0;
