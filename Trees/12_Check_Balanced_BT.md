@@ -1,6 +1,7 @@
 ![image](https://github.com/user-attachments/assets/d2448811-7aff-4b6c-90ec-f7bc12f80b79)    
      
-**Brute Force (Naive) Approach:**         
+**Brute Force (Naive) Approach:**    
+TC: O(N)*O(N) ~ O(N*N) => O(N) for traversal, O(N) for finding lh and rh overall (WC - if tree is skewed)
       
 ![image](https://github.com/user-attachments/assets/3ff4b650-b3a3-4dea-8bd2-fa5b283bb3ed)       
 
