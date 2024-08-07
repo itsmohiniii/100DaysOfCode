@@ -1,6 +1,10 @@
 **Intuition:**       
-Go left, left, left, then go right, right, right, again go left left left and then right, right, right and     
-the print root only its left and right are both null.     
+Go left, left, left, until left is NULL      
+then go right,     
+again go left, left, left, until NULL      
+and then go right          
+and then print root only its left and right are both null.     
+We will use an external stack in order to maintain the stack space.     
      
 ![image](https://github.com/user-attachments/assets/9db3d432-8ede-4ef2-ad98-0bf0fb271c81)   
 
