@@ -5,7 +5,7 @@ SC: O(N) => it takes O(H) for recursive auxiliary stack space WC: if skewed tree
 This approach is better as generally, binary trees are not skewed rather they generally have a small height of logN. then SC: O(H) ~ O(logN).
 
 using Level Order Traversal :  
-SC: O(N) => for queue WC: if complete BT, queue will end up storing almost all N nodes.       
+SC: O(N) => for queue WC: if complete BT & last level is completely filled, queue will end up storing almost all N nodes.       
         
 ![image](https://github.com/user-attachments/assets/f652c7fb-3fe6-4f26-8195-e2c9c76c900a)   
 
