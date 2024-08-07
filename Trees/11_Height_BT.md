@@ -12,7 +12,7 @@ SC: O(N) => for queue WC: if complete BT & last level is completely filled, queu
 **Recursive Approach:**   
 
 Recurrence Relation : height of the node = 1 + max(lh, rh)  
-where lh => height of left subtree, rh => height of right subtree.        
+where, lh => height of left subtree, rh => height of right subtree.        
      
 ![image](https://github.com/user-attachments/assets/462daa4d-255f-4fa6-acf3-175323ab67f0)   
 
