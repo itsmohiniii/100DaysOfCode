@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/9db3d432-8ede-4ef2-ad98-0bf0fb271c81)   
 
-Time Complexity :    
+**Time Complexity :**    
 WC: if it is a skewed tree (which only has right children)     
 N nodes will be inserted into the stack, so O(N) time to insert N nodes,   
 and O(N) time to print N nodes which coming back    
