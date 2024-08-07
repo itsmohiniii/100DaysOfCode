@@ -1,7 +1,8 @@
 **Comparison of SC** (Recursive vs Level Order Approach):  
 
 Recursive Approach :  
-SC: O(N) => it takes O(H) for recursive auxiliary stack space WC: if skewed tree, height of binary tree will be N, hence, SC = O(N).    
+SC: O(N) => it takes O(H) for recursive auxiliary stack space WC: if skewed tree, height of binary tree will be N, hence, SC = O(N).  
+This approach is better as generally, binary trees are not skewed rather they generally have a small height of logN. then SC: O(H) ~ O(logN).
 
 using Level Order Traversal :  
 SC: O(N) => for queue WC: if complete BT, queue will end up storing almost all N nodes.       
