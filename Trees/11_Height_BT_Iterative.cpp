@@ -1,4 +1,4 @@
-//Maximum Depth or Height of Binary Tree (using Level Order Traversal - Iterative Approach)
+ //Maximum Depth or Height of Binary Tree (using Level Order Traversal - Iterative Approach)
 //Approach: Use a variable 'level', which increases by 1 on going left or right, and the highest level will always be the answer.
 
 #include<bits/stdc++.h>
@@ -19,7 +19,7 @@ struct TreeNode {
 class Solution {
   public:
   //TC: O(N) as we traverse all nodes.
-  //SC: O(N) => for queue   WC: if skewed tree, height of binary tree will be N, hence, SC = O(N).
+  //SC: O(N) => for queue WC: if complete BT, queue will end up storing almost all N nodes.
   int maxDepth(TreeNode* root) {
     
   }
