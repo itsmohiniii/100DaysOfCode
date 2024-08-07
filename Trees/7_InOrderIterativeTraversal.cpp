@@ -37,19 +37,19 @@ public:
     if(root == NULL) return inorder;
     
     stack<TreeNode*> st; //LIFO
-    TreeNode* node = root;
+    TreeNode* curr = root; //current node
     
     while(true) {
-      if(node !=  NULL) {
-        st.push(node); //created auxiliary stack space using stack DS 
-        node = node->left;
+      if(curr !=  NULL) {
+        st.push(curr); //created auxiliary stack space using stack DS 
+        curr = curr->left;
       } 
       else { // node is NULL
         if(st.empty()) break;
-        node = st.top();
+        curr = st.top();
         st.pop();
-        inorder.push_back(node->data);
-        node = node->right;
+        inorder.push_back(curr->data);
+        curr = curr->right;
       }
     }
     
@@ -71,4 +71,3 @@ int main() {
   } 
   return 0;
 }
-
