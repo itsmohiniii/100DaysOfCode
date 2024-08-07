@@ -19,7 +19,7 @@ struct TreeNode {
 class Solution {
   public:
   //TC: O(N) as we traverse all nodes.
-  //SC: O(N) => for queue WC: if complete BT, queue will end up storing almost all N nodes.
+  //SC: O(N) => for queue WC: if complete BT & last level is completely filled, queue will end up storing almost all N nodes.
   int maxDepth(TreeNode* root) {
     
   }
