@@ -10,6 +10,9 @@ SC: O(N) => for queue WC: if complete BT & last level is completely filled, queu
 ![image](https://github.com/user-attachments/assets/f652c7fb-3fe6-4f26-8195-e2c9c76c900a)   
 
 **Recursive Approach (Implementation):**   
+
+Recurrence Relation : 1 + max(lh, rh)    
+![image](https://github.com/user-attachments/assets/462daa4d-255f-4fa6-acf3-175323ab67f0)   
    
 ![image](https://github.com/user-attachments/assets/5fef4cda-67b7-421e-a040-c8aaca87a237)
 
