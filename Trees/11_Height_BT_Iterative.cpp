@@ -1,5 +1,5 @@
 //Maximum Depth or Height of Binary Tree (using Level Order Traversal - Iterative Approach)
-//Approach: Use a variable 'level', which increases by 1 on going left or right, and the highest level will always be the answer.
+//Hint: Use a variable 'level', which increases by 1 on going left or right, and the highest level will always be the answer.
 
 #include<bits/stdc++.h>
 using namespace std;
