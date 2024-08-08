@@ -1,4 +1,4 @@
-//Maximum Depth or Height of Binary Tree (using Recursion)
+//Diameter of Binary Tree
 
 #include<bits/stdc++.h>
 using namespace std;
