@@ -32,6 +32,8 @@ class Solution {
   //TC: O(N) as we traverse all nodes.
   //SC: O(N) => it takes O(H) for recursive auxiliary stack space WC: if skewed tree, height of binary tree will be N, hence, SC = O(N).
   int diameterBT(TreeNode* root) {
+    if(root == NULL) return 0;
+    
     int diameter = 0;
     maxDepth(root, diameter);
     return diameter;
@@ -47,7 +49,8 @@ int main() {
   root->left->left->left = new TreeNode(6); 
   
   Solution obj;
-  cout<<obj.diameterBT(root);  //Output: 4
+  int diameter = obj.diameterBT(root);  
+  cout<<diameter; //Output: 4
 
   return 0;
 }
