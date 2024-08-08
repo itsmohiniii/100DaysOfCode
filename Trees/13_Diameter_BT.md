@@ -11,5 +11,11 @@ For N nodes, we can find (lh+rh) for every node, then diameter of Binary tree = 
 
 TC: O(N)*O(N) ~ O(N*N) => O(N) for traversal of entire tree, O(N) for finding left height and right height overall (WC - if tree is skewed)     
       
-![image](https://github.com/user-attachments/assets/2fd26a51-2156-46f6-b76d-71402ae63ed4)
+![image](https://github.com/user-attachments/assets/2fd26a51-2156-46f6-b76d-71402ae63ed4)    
+
+**Optimal Approach:**     
+TC: O(N)     
+       
+![image](https://github.com/user-attachments/assets/9d012707-13ab-4bfd-8d79-bf97ff19b4b8)
+     
           
