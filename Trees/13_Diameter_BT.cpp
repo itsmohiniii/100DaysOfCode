@@ -18,7 +18,7 @@ struct TreeNode {
 class Solution {
   private:
   int maxDepth(TreeNode* root, int& diameter) {
-    if(root == NULL) return 0;
+    if(root == nullptr) return 0;
     
     int lh = maxDepth(root->left, diameter);
     int rh = maxDepth(root->right, diameter);
@@ -32,7 +32,7 @@ class Solution {
   //TC: O(N) as we traverse all nodes.
   //SC: O(N) => it takes O(H) for recursive auxiliary stack space WC: if skewed tree, height of binary tree will be N, hence, SC = O(N).
   int diameterBT(TreeNode* root) {
-    if(root == NULL) return 0;
+    if(root == nullptr) return 0;
     
     int diameter = 0;
     maxDepth(root, diameter);
