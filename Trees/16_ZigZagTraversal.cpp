@@ -40,9 +40,11 @@ class Solution {
           nodesQueue.push(node->right);
         }
       }
+      
       leftToRight = !leftToRight;
       res.push_back(row);
     } 
+    
     return res;
   }
 };
