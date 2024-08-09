@@ -13,6 +13,7 @@ struct TreeNode {
 
 class Solution {
   public: 
+  //TC: O(N), SC:O(N) => both similar to Level Order Traversal
   vector<vector<int>> zigzagLevelOrder (TreeNode* root) {
     vector<vector<int>> res;
     if(root == nullptr) {
