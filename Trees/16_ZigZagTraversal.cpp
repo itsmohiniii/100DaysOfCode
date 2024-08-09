@@ -30,7 +30,9 @@ class Solution {
       for(int i =0;i<size;i++) {
         TreeNode* node = nodesQueue.front();
         nodesQueue.pop();
-        int index = leftToRight ? i : size-i-1;
+
+        //find position to fill node's value (whether to insert in 'row' vector from leftToRight or rightToLeft)
+        int index = leftToRight ? i : (size-1-i);
         row[index] = node->data;
         
         if(node->left != nullptr) {
@@ -40,7 +42,8 @@ class Solution {
           nodesQueue.push(node->right);
         }
       }
-      
+
+      //after this level
       leftToRight = !leftToRight;
       res.push_back(row);
     } 
